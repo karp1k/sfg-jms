@@ -19,7 +19,8 @@ public class JmsConfig {
         // will convert POJO to JSON string
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
         converter.setTargetType(MessageType.TEXT);
-        // for spring processing
+        // for spring processing. Spring sets value of property equal to specific java class. Check @Payload in HelloListener
+        // for @Payload HelloWorldMessage would be: _type = guru.springframework.sfgjms.model.HelloWorldMessage
         converter.setTypeIdPropertyName("_type");
         return converter;
     }
