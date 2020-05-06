@@ -12,6 +12,8 @@ import org.springframework.jms.support.converter.MessageType;
 @Configuration
 public class JmsConfig {
 
+    public static final String MY_QUEUE = "hellow-world-queue";
+
     @Bean
     public MessageConverter messageConverter() {
         // will convert POJO to JSON string
